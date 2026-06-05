@@ -7,13 +7,6 @@ pipeline {
 
     stages {
 
-        stage('Clone Repository') {
-            steps {
-                git branch: 'main',
-                    url: 'https://github.com/San-Aram/Software_Construction_Eventa.git'
-            }
-        }
-
         stage('Verify Tools') {
             steps {
                 bat 'git --version'
@@ -25,6 +18,11 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 bat 'docker build -t %IMAGE_NAME%:%BUILD_NUMBER% -t %IMAGE_NAME%:latest .'
+            }
+            post {
+                always {
+                    jiraSendBuildInfo()
+                }
             }
         }
 
