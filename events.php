@@ -327,7 +327,7 @@ if ($searchTerm) {
                                 📍 <?php echo htmlspecialchars($event['location']); ?>
                             </div>
                             <div class="event-actions">
-                                <span style="color: #667eea; font-weight: 600;">Click to view details</span>
+                                <span style="color: #667eea; font-weight: 600;">Clickk to view details</span>
                                 <form method="post" onsubmit="return confirm('Are you sure you want to delete this event?');" onclick="event.stopPropagation();">
                                     <input type="hidden" name="action" value="delete">
                                     <input type="hidden" name="id" value="<?php echo $event['id']; ?>">
