@@ -370,7 +370,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <div class="form-group">
                             <label for="expiry_date">
                                 <i class='bx bx-calendar'></i>
-                                Expiry Date
+                                Expirye Date
                             </label>
                             <input type="text" id="expiry_date" name="expiry_date" placeholder="MM/YY" maxlength="5" required>
                         </div>
